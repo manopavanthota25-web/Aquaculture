@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaSmart – Smart Aquaculture Recommendation System</title>
+    <meta
+      name="description"
+      content="AquaSmart helps fish farmers make preliminary aquaculture decisions using pond details, location-based weather, and rule-based fish recommendations."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+  </head>
+  <body>
+    <!-- ===== Navigation Bar ===== -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <svg
+            class="nav-logo"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M6.5 12c.94-1.5 2.5-2 4.5-2s3.56.5 4.5 2c-1.5 2-3 2-4.5 2s-3 0-4.5-2z"
+            />
+            <path d="M18 12c2-1 3-2 3-2s1 1 1 2-1 2-1 2-1-1-3-2z" />
+            <circle cx="9" cy="11" r=".5" fill="currentColor" />
+          </svg>
+          <span class="nav-title">AquaSmart</span>
+        </div>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+          <a href="#home" class="nav-link active" data-section="home">Home</a>
+          <a href="#pond-registration" class="nav-link" data-section="pond-registration"
+            >Pond Registration</a
+          >
+          <a href="#weather" class="nav-link" data-section="weather">Weather</a>
+          <a href="#recommendations" class="nav-link" data-section="recommendations"
+            >Fish Recommendations</a
+          >
+          <a href="#management" class="nav-link" data-section="management"
+            >Pond Management</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main class="main-content">
+      <!-- ----- Home Section ----- -->
+      <section id="home" class="page-section active">
+        <div class="hero">
+          <div class="hero-text">
+            <h1 class="hero-heading">Smart Aquaculture Starts Here</h1>
+            <p class="hero-description">
+              AquaSmart is a location-based aquaculture recommendation system that helps
+              fish farmers make informed decisions. Register your pond, check real-time
+              weather for your area, and get rule-based fish species recommendations —
+              all in one place.
+            </p>
+            <div class="hero-buttons">
+              <a
+                href="#pond-registration"
+                class="btn btn-primary"
+                data-nav="pond-registration"
+                >Register Your Pond</a
+              >
+              <a href="#recommendations" class="btn btn-secondary" data-nav="recommendations"
+                >View Recommendations</a
+              >
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="https://images.pexels.com/photos/263326/pexels-photo-263326.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Aquaculture fish pond"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2-1 4-1 6 0s4 1 6 0 4-1 6 0"/><path d="M3 18c2-1 4-1 6 0s4 1 6 0 4-1 6 0"/><path d="M3 6c2-1 4-1 6 0s4 1 6 0 4-1 6 0"/></svg>
+            </div>
+            <h3>Pond Registration</h3>
+            <p>Record pond dimensions, water type, pH, and other quality parameters in a simple form.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </div>
+            <h3>Weather Dashboard</h3>
+            <p>Get real-time temperature, humidity, rainfall, and weather conditions for your pond location.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Fish Recommendations</h3>
+            <p>Receive rule-based fish species suggestions matched to your pond conditions and local weather.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3>Pond Management</h3>
+            <p>Access practical suggestions for water-quality monitoring, feeding, and pond maintenance.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----- Pond Registration Section ----- -->
+      <section id="pond-registration" class="page-section">
+        <div class="section-header">
+          <h2>Pond Registration</h2>
+          <p>Enter your pond details below. Fields marked with <span class="required">*</span> are required.</p>
+        </div>
+
+        <div class="form-card">
+          <form id="pondForm" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="pondName">Pond Name <span class="required">*</span></label>
+                <input
+                  type="text"
+                  id="pondName"
+                  name="pondName"
+                  placeholder="e.g., Main Pond 1"
+                  required
+                />
+                <span class="error-msg" id="err-pondName"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="location">Village or District <span class="required">*</span></label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="e.g., Khordha, Odisha"
+                  required
+                />
+                <span class="error-msg" id="err-location"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="pondArea">Pond Area (hectares) <span class="required">*</span></label>
+                <input
+                  type="number"
+                  id="pondArea"
+                  name="pondArea"
+                  placeholder="e.g., 0.5"
+                  min="0.01"
+                  step="0.01"
+                  required
+                />
+                <span class="error-msg" id="err-pondArea"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="pondDepth">Pond Depth (metres) <span class="required">*</span></label>
+                <input
+                  type="number"
+                  id="pondDepth"
+                  name="pondDepth"
+                  placeholder="e.g., 2.0"
+                  min="0.1"
+                  step="0.1"
+                  required
+                />
+                <span class="error-msg" id="err-pondDepth"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="waterType">Water Type <span class="required">*</span></label>
+                <select id="waterType" name="waterType" required>
+                  <option value="">Select water type</option>
+                  <option value="freshwater">Freshwater</option>
+                  <option value="brackish">Brackish Water</option>
+                </select>
+                <span class="error-msg" id="err-waterType"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="ph">pH Level <span class="required">*</span></label>
+                <input
+                  type="number"
+                  id="ph"
+                  name="ph"
+                  placeholder="e.g., 7.5"
+                  min="0"
+                  max="14"
+                  step="0.1"
+                  required
+                />
+                <span class="error-msg" id="err-ph"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="dissolvedOxygen">Dissolved Oxygen (mg/L) <span class="optional">(optional)</span></label>
+                <input
+                  type="number"
+                  id="dissolvedOxygen"
+                  name="dissolvedOxygen"
+                  placeholder="e.g., 6.0"
+                  min="0"
+                  step="0.1"
+                />
+                <span class="error-msg" id="err-dissolvedOxygen"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="salinity">Salinity (ppt) <span class="optional">(optional)</span></label>
+                <input
+                  type="number"
+                  id="salinity"
+                  name="salinity"
+                  placeholder="e.g., 0.5"
+                  min="0"
+                  step="0.1"
+                />
+                <span class="error-msg" id="err-salinity"></span>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="saveBtn">Save Pond Details</button>
+              <button type="button" class="btn btn-secondary" id="updateBtn" style="display:none;">
+                Update Pond Details
+              </button>
+              <button type="button" class="btn btn-outline" id="resetBtn">Reset Form</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Saved Ponds List -->
+        <div class="saved-ponds-section">
+          <h3>Saved Ponds</h3>
+          <div id="savedPondsList" class="saved-ponds-list">
+            <p class="empty-state">No ponds saved yet. Fill in the form above and click "Save Pond Details".</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----- Weather Dashboard Section ----- -->
+      <section id="weather" class="page-section">
+        <div class="section-header">
+          <h2>Weather Dashboard</h2>
+          <p>Enter a location to fetch real-time weather data for your aquaculture pond area.</p>
+        </div>
+
+        <div class="weather-search-card">
+          <div class="weather-search-row">
+            <input
+              type="text"
+              id="weatherLocation"
+              placeholder="Enter village or district name (e.g., Bhubaneswar)"
+            />
+            <button type="button" class="btn btn-primary" id="fetchWeatherBtn">Get Weather</button>
+          </div>
+          <div id="weatherSearchMsg" class="search-msg"></div>
+        </div>
+
+        <div id="weatherResults" class="weather-results">
+          <p class="empty-state">Weather data will appear here after searching for a location.</p>
+        </div>
+      </section>
+
+      <!-- ----- Fish Recommendations Section ----- -->
+      <section id="recommendations" class="page-section">
+        <div class="section-header">
+          <h2>Fish Recommendations</h2>
+          <p>Select a saved pond to generate rule-based fish species recommendations based on pond conditions and current weather.</p>
+        </div>
+
+        <div class="recommendation-controls">
+          <div class="form-group" style="max-width:400px;">
+            <label for="selectPond">Select a Saved Pond</label>
+            <select id="selectPond">
+              <option value="">-- Choose a pond --</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary" id="generateRecsBtn">
+            Generate Recommendations
+          </button>
+        </div>
+
+        <div id="recommendationResults" class="recommendation-results">
+          <p class="empty-state">
+            Recommendations will appear here. Save a pond in the Pond Registration section first.
+          </p>
+        </div>
+      </section>
+
+      <!-- ----- Pond Management Section ----- -->
+      <section id="management" class="page-section">
+        <div class="section-header">
+          <h2>Pond Management Suggestions</h2>
+          <p>General best practices for maintaining a healthy aquaculture pond.</p>
+        </div>
+
+        <div class="management-grid">
+          <div class="management-card">
+            <div class="management-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11H1l8-8 8 8h-8v8z" transform="rotate(180 12 12)"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3>Water-Quality Monitoring</h3>
+            <ul>
+              <li>Test pH weekly — ideal range is 6.5 to 8.5 for most freshwater species.</li>
+              <li>Monitor dissolved oxygen; levels below 4 mg/L stress fish and can cause mortality.</li>
+              <li>Check ammonia and nitrite levels every 1–2 weeks.</li>
+              <li>Maintain water transparency between 25–40 cm using a Secchi disc.</li>
+              <li>Record all readings in a logbook to track trends over time.</li>
+            </ul>
+          </div>
+
+          <div class="management-card">
+            <div class="management-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Pond Maintenance</h3>
+            <ul>
+              <li>Remove aquatic weeds regularly to prevent oxygen depletion.</li>
+              <li>Apply lime (CaO) to pond bottom during preparation to balance pH.</li>
+              <li>Check and repair pond embankments and inlet/outlet structures monthly.</li>
+              <li>Drain and dry the pond once a year to eliminate parasites and diseases.</li>
+              <li>Ensure pond depth is maintained between 1.5–3.0 metres for optimal fish health.</li>
+            </ul>
+          </div>
+
+          <div class="management-card">
+            <div class="management-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <h3>Weather Monitoring</h3>
+            <ul>
+              <li>Check weather forecasts daily; heavy rainfall can alter pH and salinity suddenly.</li>
+              <li>Increase aeration during hot, humid days when dissolved oxygen drops.</li>
+              <li>Avoid feeding before or during thunderstorms to prevent waste accumulation.</li>
+              <li>Prepare for flooding by reinforcing embankments during monsoon season.</li>
+              <li>Reduce stocking density during peak summer to lower oxygen demand.</li>
+            </ul>
+          </div>
+
+          <div class="management-card">
+            <div class="management-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3>Feeding Practices</h3>
+            <ul>
+              <li>Feed fish at the same time and place each day for consistency.</li>
+              <li>Provide feed at 3–5% of body weight per day, divided into 2–3 feedings.</li>
+              <li>Use floating pellets to monitor consumption and avoid overfeeding.</li>
+              <li>Stop feeding if fish show signs of disease or if water quality deteriorates.</li>
+              <li>Adjust feed quantity based on seasonal temperature and fish growth stage.</li>
+            </ul>
+          </div>
+
+          <div class="management-card">
+            <div class="management-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Consulting Experts</h3>
+            <ul>
+              <li>Consult local fisheries department officers for species selection and disease advice.</li>
+              <li>Contact a veterinarian immediately if fish show abnormal behaviour or lesions.</li>
+              <li>Join local aquaculture cooperatives to share knowledge and resources.</li>
+              <li>Attend training programs offered by Krishi Vigyan Kendras (KVKs).</li>
+              <li>AquaSmart provides preliminary recommendations — always verify with experts before stocking.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="footer-container">
+        <p>
+          AquaSmart — Location-Based Smart Aquaculture Recommendation System.
+          A B.Tech project demonstration.
+        </p>
+        <p class="footer-note">
+          Weather data provided by Open-Meteo. This tool provides preliminary
+          recommendations only and does not guarantee suitability.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
